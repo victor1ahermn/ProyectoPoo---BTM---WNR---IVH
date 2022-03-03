@@ -30,18 +30,52 @@ string Propietario::getTelefono(){
     return telefono;
 }
 
-void Propietario::setEmail(string email){
-    this -> email = email;
+void Propietario::setEmail(string s){
+    email = s;
 }
 
-void Propietario::setIdentificacion(string identificacion){
-    this -> identificacion = identificacion;
+void Propietario::setIdentificacion(string s){
+    identificacion = s;
 }
 
-void Propietario::setNombre(string nombre){
-    this -> nombre = nombre;
+void Propietario::setNombre(string s){
+    nombre = s;
 }
 
-void Propietario::setTelefono(string telefono){
-    this -> telefono = telefono;
+void Propietario::setTelefono(string s){
+    telefono = s;
+}
+
+
+void Propietario:: agregarMascota(string id,Mascota *mascota){
+    mascotas[id] = mascota;
+}
+
+bool Propietario::buscarMascota(string id){
+    return mascotas.count(id) > 0;//Retorna true si la mascota si la posee la persona, si no false
+}
+
+void Propietario::eliminarMascota(string id){
+    mascotas.erase(id);
+}
+
+void Propietario::imprimirMascotas(){
+    for(map<string,Mascota*>::iterator it = mascotas.begin(); it != mascotas.end();it++){
+        it->second->imprimirInformacion();
+        cout<<"-------------------"<<endl;
+    }
+
+}
+
+void Propietario::imprimirInformacion(){
+    cout<<"Nombre: "<<nombre<<endl;
+    cout<<"Identificacion: "<<identificacion<<endl;
+    cout<<"Email: "<<email<<endl;
+    cout<<"Telefono: "<<telefono<<endl;
+    cout<<"Mascotas:"<<endl;
+    cout<<"-------------------"<<endl;
+    imprimirMascotas();
+    
+
+
 }

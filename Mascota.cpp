@@ -52,38 +52,60 @@ string Mascota::getFechaDefuncion(){
 }
 
 
-void Mascota::setRaza(string raza){
-    this -> raza = raza;
+void Mascota::setRaza(string s){
+    raza = s;
 }
 
-void Mascota::setTipo(string tipo){
-    this -> tipo = tipo;
+void Mascota::setTipo(string s){
+    tipo = s;
 }
 
-void Mascota::setTipoSangre(string rh){
-    tipoSangre = rh;
+void Mascota::setTipoSangre(string s){
+    tipoSangre = s;
 }
 
-void Mascota::setNombre(string nombre){
-    this -> nombre = nombre;
+void Mascota::setNombre(string s){
+    nombre = s;
 }
 
-void Mascota::setIdentificacion(string id){
-    identificacion = id;
+void Mascota::setIdentificacion(string s){
+    identificacion = s;
 }
 
-void Mascota::setFechaDefuncion(string diaMuerte){
-    fechaDefuncion = diaMuerte;
+void Mascota::setFechaDefuncion(string s){
+    fechaDefuncion = s;
 }
 
-void Mascota::setStatus(bool estado){
-    status = estado;
+void Mascota::setStatus(bool b){
+    status = b;
 }
 
-void Mascota::setEdad(int anios){
-    edad =anios;
+void Mascota::setEdad(int i){
+    edad =i;
 }
 
-void Mascota::setPeso(double peso){
-    this -> peso = peso;
+void Mascota::setPeso(double d){
+    peso = d;
+}
+
+
+
+void Mascota::imprimirInformacion(){
+    cout<<"Raza: "<<raza<<endl;
+    cout<<"Tipo: "<<tipo<<endl;
+    cout<<"Tipo sangre: "<<tipoSangre<<endl;
+    cout<<"Nombre: "<<nombre<<endl;
+    cout<<"Identificacion: "<<identificacion<<endl;
+    if(!status){
+        cout<<"Status: viva"<<endl;
+    }
+    else{
+        cout<<"Status: muerta"<<endl;
+        cout<<"Fecha de defuncion: "<<fechaDefuncion<<endl;
+    }
+    cout<<"Edad: "<<edad<<endl;
+    cout<<"Peso: "<<peso<<endl;
+
+
+
 }

@@ -22,6 +22,13 @@ class Propietario{
         void setEmail(string);
         void setIdentificacion(string);
         void setTelefono(string);
+        void agregarMascota(string, Mascota*);
+        void imprimirInformacion();
+        void imprimirMascotas();
+        void eliminarMascota(string);
+        bool buscarMascota(string);
+
+
 };
 
 #endif
