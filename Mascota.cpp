@@ -1,5 +1,6 @@
 #include "Mascota.h"
 
+/// constructor por parámetros
 
 Mascota::Mascota(){
 
@@ -52,43 +53,43 @@ string Mascota::getFechaDefuncion(){
 }
 
 
-void Mascota::setRaza(string s){
-    raza = s;
+void Mascota::setRaza(string raza){
+   this -> raza = raza;
 }
 
-void Mascota::setTipo(string s){
-    tipo = s;
+void Mascota::setTipo(string tipo){
+    this -> tipo = tipo;
 }
 
-void Mascota::setTipoSangre(string s){
-    tipoSangre = s;
+void Mascota::setTipoSangre(string sangre){
+    this -> tipoSangre = sangre;
 }
 
-void Mascota::setNombre(string s){
-    nombre = s;
+void Mascota::setNombre(string nombre){
+    this -> nombre = nombre;
 }
 
-void Mascota::setIdentificacion(string s){
-    identificacion = s;
+void Mascota::setIdentificacion(string id){
+    this -> identificacion = id;
 }
 
-void Mascota::setFechaDefuncion(string s){
-    fechaDefuncion = s;
+void Mascota::setFechaDefuncion(string fechaDefuncion){
+    this -> fechaDefuncion = fechaDefuncion;
 }
 
-void Mascota::setStatus(bool b){
-    status = b;
+void Mascota::setStatus(bool estado){
+    this -> status = estado;
 }
 
-void Mascota::setEdad(int i){
-    edad =i;
+void Mascota::setEdad(int edad){
+    this -> edad =edad;
 }
 
-void Mascota::setPeso(double d){
-    peso = d;
+void Mascota::setPeso(double peso){
+    this -> peso = peso;
 }
 
-
+/// procedimiento que muestra en pantalla los datos del objeto
 
 void Mascota::imprimirInformacion(){
     cout<<"Raza: "<<raza<<endl;
